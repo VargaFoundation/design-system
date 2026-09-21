@@ -1,6 +1,6 @@
 {
   "name": "@varga/design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Le design system de la Varga Foundation : jetons, feuilles Tailwind 4 et composants React.",
   "license": "Apache-2.0",
   "repository": {
