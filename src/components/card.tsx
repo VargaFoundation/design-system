@@ -40,7 +40,13 @@ export function Card({
       {...props}
     >
       {hasHeader && (
-        <header className="mb-4 flex items-start justify-between gap-4">
+        <header
+          className={cn(
+            "mb-4 flex items-start justify-between gap-4",
+            // Une carte sans marge (un tableau qui va d'un bord à l'autre) garde un en-tête aéré.
+            padding === "none" && "px-6 pt-6",
+          )}
+        >
           <div className="min-w-0 space-y-1">
             {eyebrow != null && <Label>{eyebrow}</Label>}
             {typeof title === "string" ? (
