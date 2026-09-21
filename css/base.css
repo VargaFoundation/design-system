@@ -1,0 +1,131 @@
+/*
+ * Les défauts de la page : ce qu'un élément HTML nu doit déjà avoir l'air d'être.
+ * Chargé dans `@layer base`, pour qu'une classe utilitaire l'emporte toujours.
+ */
+
+@layer base {
+  html {
+    background: var(--varga-surface);
+    color: var(--varga-ink);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background: var(--varga-surface);
+    color: var(--varga-ink);
+    font-family: var(--varga-font-text);
+    font-size: var(--varga-text-sm);
+    line-height: var(--varga-leading-body);
+    letter-spacing: var(--varga-tracking-body);
+    /* Pas de ligatures : en monospace, `->` doit rester deux caractères lisibles. */
+    font-feature-settings: "liga" 0, "calt" 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--varga-font-display);
+    font-weight: 700;
+    letter-spacing: var(--varga-tracking-display);
+    line-height: var(--varga-leading-snug);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--varga-line-strong);
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--varga-duration-fast) var(--varga-easing);
+  }
+
+  a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  /* Chiffres alignés : dans un tableau de coûts ou de durées, les colonnes doivent tomber. */
+  table,
+  time,
+  data {
+    font-variant-numeric: tabular-nums;
+  }
+
+  hr {
+    border: 0;
+    border-top: var(--varga-border-hairline) solid var(--varga-line);
+  }
+
+  ::selection {
+    background: var(--varga-ink);
+    color: var(--varga-surface);
+  }
+
+  /* Le seul endroit où l'accent apparaît sans qu'on le demande : le focus clavier. */
+  :focus-visible {
+    outline: var(--varga-border-strong) solid var(--varga-focus);
+    outline-offset: 2px;
+  }
+
+  /* Tailwind 4 donne `cursor: default` aux boutons ; ici un bouton se montre cliquable. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--varga-ink-placeholder);
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/*
+ * La trame de papier millimétré derrière le titre du site : des filets à peine visibles tous
+ * les 60 px. Assez discrète pour ne jamais concurrencer le texte posé dessus.
+ */
+@utility grid-paper {
+  background-image:
+    linear-gradient(var(--varga-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--varga-grid) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: -1px -1px;
+}
+
+/*
+ * À l'intérieur d'une bande inversée (fond noir), les rôles s'inversent aussi : un bouton
+ * principal devient blanc, un filet devient gris foncé — sans que chaque composant ait à le
+ * savoir.
+ */
+@layer base {
+  .inverse {
+    --varga-surface: var(--varga-neutral-950);
+    --varga-surface-muted: var(--varga-neutral-900);
+    --varga-line: var(--varga-neutral-800);
+    --varga-line-strong: var(--varga-neutral-700);
+    --varga-ink: var(--varga-neutral-50);
+    --varga-ink-muted: var(--varga-neutral-400);
+    --varga-ink-subtle: var(--varga-neutral-600);
+    --varga-inverse: var(--varga-neutral-50);
+    --varga-inverse-ink: var(--varga-neutral-950);
+    --varga-inverse-hover: var(--varga-neutral-200);
+    --varga-accent-strong: var(--varga-accent);
+    --varga-mark-frame: var(--varga-neutral-50);
+  }
+}

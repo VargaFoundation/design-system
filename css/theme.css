@@ -1,0 +1,67 @@
+/* GÉNÉRÉ par scripts/build-tokens.mjs depuis tokens/tokens.json — ne pas éditer à la main. */
+
+@theme inline {
+  --color-surface: var(--varga-surface);
+  --color-surface-muted: var(--varga-surface-muted);
+  --color-surface-sunken: var(--varga-surface-sunken);
+  --color-line: var(--varga-line);
+  --color-line-strong: var(--varga-line-strong);
+  --color-ink: var(--varga-ink);
+  --color-ink-muted: var(--varga-ink-muted);
+  --color-ink-subtle: var(--varga-ink-subtle);
+  --color-inverse: var(--varga-inverse);
+  --color-inverse-ink: var(--varga-inverse-ink);
+  --color-inverse-hover: var(--varga-inverse-hover);
+  --color-ok: var(--varga-ok);
+  --color-warn: var(--varga-warn);
+  --color-danger: var(--varga-danger);
+  --color-accent: var(--varga-accent);
+  --color-accent-hover: var(--varga-accent-hover);
+  --color-accent-ink: var(--varga-accent-ink);
+  --color-accent-strong: var(--varga-accent-strong);
+  --color-accent-soft: var(--varga-accent-soft);
+  --color-brand: var(--varga-brand);
+  --color-mark-frame: var(--varga-mark-frame);
+  --color-grid: var(--varga-grid);
+  --color-focus: var(--varga-focus);
+  --color-ink-placeholder: var(--varga-ink-placeholder);
+  --color-neutral-50: var(--varga-neutral-50);
+  --color-neutral-100: var(--varga-neutral-100);
+  --color-neutral-200: var(--varga-neutral-200);
+  --color-neutral-300: var(--varga-neutral-300);
+  --color-neutral-400: var(--varga-neutral-400);
+  --color-neutral-500: var(--varga-neutral-500);
+  --color-neutral-600: var(--varga-neutral-600);
+  --color-neutral-700: var(--varga-neutral-700);
+  --color-neutral-800: var(--varga-neutral-800);
+  --color-neutral-900: var(--varga-neutral-900);
+  --color-neutral-950: var(--varga-neutral-950);
+
+  --font-sans: var(--varga-font-text);
+  --font-mono: var(--varga-font-text);
+  --font-display: var(--varga-font-display);
+  --text-xs: var(--varga-text-xs);
+  --text-sm: var(--varga-text-sm);
+  --text-base: var(--varga-text-base);
+  --text-lg: var(--varga-text-lg);
+  --text-xl: var(--varga-text-xl);
+  --text-2xl: var(--varga-text-2xl);
+  --text-3xl: var(--varga-text-3xl);
+  --text-4xl: var(--varga-text-4xl);
+  --text-5xl: var(--varga-text-5xl);
+  --text-6xl: var(--varga-text-6xl);
+  --text-7xl: var(--varga-text-7xl);
+
+  --radius: 0;
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+
+  --shadow-hover: var(--varga-shadow-hover);
+  --ease-standard: var(--varga-easing);
+}

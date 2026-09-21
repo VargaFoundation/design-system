@@ -1,0 +1,21 @@
+/*
+ * Point d'entrée du design system Varga, pour une application Tailwind 4 :
+ *
+ *   @import "tailwindcss";
+ *   @import "@varga/design-system/css";
+ *   @source "../node_modules/@varga/design-system/src";
+ *
+ * Le `@source` compte : sans lui, Tailwind ne voit pas les classes utilisées par les
+ * composants et ne les génère pas — les composants s'affichent alors sans style.
+ *
+ * Sans Tailwind, `tokens.css`, `fonts.css` et `base.css` s'importent seuls : les variables
+ * `--varga-*` suffisent à tout construire.
+ */
+
+@import "./fonts.css";
+@import "./tokens.css";
+@import "./theme.css";
+@import "./base.css";
+
+/* La variante `dark:` suit la classe `.dark` ou `data-theme="dark"`, comme les jetons. */
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));

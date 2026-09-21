@@ -1,0 +1,53 @@
+{
+  "name": "@varga/design-system",
+  "version": "0.1.0",
+  "description": "Le design system de la Varga Foundation : jetons, feuilles Tailwind 4 et composants React.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VargaFoundation/design-system.git"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./css": "./css/varga.css",
+    "./css/*": "./css/*",
+    "./tokens": "./tokens/tokens.json",
+    "./fonts/*": "./fonts/*"
+  },
+  "files": [
+    "src",
+    "css",
+    "fonts",
+    "tokens",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/build-tokens.mjs --check && tsc --noEmit",
+    "showcase": "node scripts/build-showcase.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "tailwindcss": ">=4"
+  },
+  "dependencies": {
+    "tailwind-merge": "^3.3.0"
+  },
+  "packageManager": "pnpm@12.4.2",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}

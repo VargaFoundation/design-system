@@ -1,0 +1,8 @@
+node_modules/
+.showcase/
+*.log
+# La vitrine est construite par la CI et publiée sur GitHub Pages : ses artefacts ne se
+# versionnent pas, sans quoi ils dériveraient des composants qu'ils montrent.
+docs/index.html
+docs/showcase.css
+docs/fonts/

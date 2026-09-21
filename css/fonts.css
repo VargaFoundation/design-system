@@ -1,0 +1,34 @@
+/*
+ * Polices de la fondation, embarquées plutôt que chargées depuis Google Fonts.
+ *
+ * Deux raisons. Une politique de sécurité stricte (`font-src 'self'`, celle de Choregos
+ * par exemple) bloque un CDN tiers, et la page s'afficherait dans la police de repli sans
+ * rien dire. Et une application interne n'a pas à signaler chaque visite à un tiers.
+ *
+ * JetBrains Mono est une police variable : un seul fichier couvre les graisses 100 à 800.
+ * Les deux familles sont sous SIL Open Font License 1.1 (fonts/OFL-*.txt).
+ */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../fonts/JetBrainsMono-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpaceMono-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/SpaceMono-700.woff2") format("woff2");
+}

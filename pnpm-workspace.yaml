@@ -1,0 +1,8 @@
+# pnpm 12 bloque les scripts d'installation par défaut : chacun est tranché ici, nommément.
+allowBuilds:
+  # Binaire natif, pour construire la vitrine (docs/).
+  esbuild: true
+  # Binaire natif de Tailwind 4 (oxide), pour la même vitrine.
+  "@tailwindcss/oxide": true
+  # Surveillance de fichiers de la CLI Tailwind : sert au mode --watch, que rien n'utilise ici.
+  "@parcel/watcher": false
