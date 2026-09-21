@@ -58,6 +58,39 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /*
+   * Un `<table>` nu a déjà l'allure du composant `Table` : un trait d'encre sous l'en-tête,
+   * des filets entre les lignes, aucune bordure verticale. Une page qui écrit du HTML simple
+   * ne tombe pas en dessous du système.
+   */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--varga-text-sm);
+    text-align: left;
+  }
+
+  thead {
+    border-bottom: var(--varga-border-hairline) solid var(--varga-ink);
+  }
+
+  th {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--varga-text-xs);
+    font-weight: 500;
+    color: var(--varga-ink-muted);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 0.625rem 0.75rem;
+    vertical-align: top;
+  }
+
+  tbody tr + tr {
+    border-top: var(--varga-border-hairline) solid var(--varga-line);
+  }
+
   hr {
     border: 0;
     border-top: var(--varga-border-hairline) solid var(--varga-line);
