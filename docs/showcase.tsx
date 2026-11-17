@@ -252,8 +252,6 @@ export function Showcase() {
             <Heading size="lg">livrables</Heading>
             <ul className="mt-6 max-w-2xl space-y-4">
               {[
-                ["ecphoria", "une plateforme de mémoire open source pour agents ia, en un seul binaire Rust."],
-                ["choregos", "un ticket entre, une mise en production maîtrisée sort."],
                 ["design-system", "ce dépôt : jetons, feuilles Tailwind 4 et composants React."],
               ].map(([name, text]) => (
                 <li key={name} className="flex gap-3">

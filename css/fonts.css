@@ -1,8 +1,8 @@
 /*
  * Polices de la fondation, embarquées plutôt que chargées depuis Google Fonts.
  *
- * Deux raisons. Une politique de sécurité stricte (`font-src 'self'`, celle de Choregos
- * par exemple) bloque un CDN tiers, et la page s'afficherait dans la police de repli sans
+ * Deux raisons. Une politique de sécurité stricte (`font-src 'self'`, par
+ * exemple) bloque un CDN tiers, et la page s'afficherait dans la police de repli sans
  * rien dire. Et une application interne n'a pas à signaler chaque visite à un tiers.
  *
  * JetBrains Mono est une police variable : un seul fichier couvre les graisses 100 à 800.
